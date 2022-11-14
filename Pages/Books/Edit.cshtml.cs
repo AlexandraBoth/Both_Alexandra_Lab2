@@ -73,7 +73,8 @@ PopulateAssignedCategoryData(_context, Book);
                 return NotFound(); 
             }
             if (await TryUpdateModelAsync<Book>(
-                bookToUpdate, "Book", 
+                bookToUpdate, 
+                "Book", 
                 i => i.Title, i => i.Author, 
                 i => i.Price, i => i.PublishingDate, i => i.Publisher)) 
             { 
