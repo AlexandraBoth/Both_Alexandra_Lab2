@@ -9,7 +9,7 @@ namespace Both_Alexandra_Lab2.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s-]*$", ErrorMessage = "Prenumele trebuie sa inceapa cu majuscula (ex. Ana sau Ana Maria sau Ana-Maria")]
         [StringLength(30, MinimumLength = 3)]
         public string? FirstName { get; set; }
-        [RegularExpression(@"^[A-Z]+[a-z\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-z\s]*$", ErrorMessage = "Numele trebuie sa inceapa cu majuscula")]
         [StringLength(30, MinimumLength = 3)]
         public string? LastName { get; set; }
         [StringLength(70)]
