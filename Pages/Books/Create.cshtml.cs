@@ -62,11 +62,11 @@ namespace Both_Alexandra_Lab2.Pages.Books
             }
 
             Book.BookCategories = newBook.BookCategories;
-                _context.Book.Add(newBook); 
-                await _context.SaveChangesAsync(); 
-                return RedirectToPage("./Index"); 
-            
-            PopulateAssignedCategoryData(_context, newBook); 
+            _context.Book.Add(newBook);
+            await _context.SaveChangesAsync();
+            return RedirectToPage("./Index");
+
+            PopulateAssignedCategoryData(_context, newBook);
             return Page();
         }
     }
